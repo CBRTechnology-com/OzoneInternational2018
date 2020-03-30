@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="TIME">
+          <DataField>TIME</DataField>
+        </Field>
+        <Field Name="CompanyInformation_Name">
+          <DataField>CompanyInformation_Name</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="ItemFilter">
+          <DataField>ItemFilter</DataField>
+        </Field>
+        <Field Name="UseSKU">
+          <DataField>UseSKU</DataField>
+        </Field>
+        <Field Name="PrintToExcel">
+          <DataField>PrintToExcel</DataField>
+        </Field>
+        <Field Name="StockkeepingUnitExist">
+          <DataField>StockkeepingUnitExist</DataField>
+        </Field>
+        <Field Name="TLGrouping">
+          <DataField>TLGrouping</DataField>
+        </Field>
+        <Field Name="Item_TABLECAPTION__________ItemFilter">
+          <DataField>Item_TABLECAPTION__________ItemFilter</DataField>
+        </Field>
+        <Field Name="FIELDCAPTION__Inventory_Posting_Group_____________Inventory_Posting_Group_">
+          <DataField>FIELDCAPTION__Inventory_Posting_Group_____________Inventory_Posting_Group_</DataField>
+        </Field>
+        <Field Name="Item__No__">
+          <DataField>Item__No__</DataField>
+        </Field>
+        <Field Name="Item_Description">
+          <DataField>Item_Description</DataField>
+        </Field>
+        <Field Name="AvgCost">
+          <DataField>AvgCost</DataField>
+        </Field>
+        <Field Name="AvgCostFormat">
+          <DataField>AvgCostFormat</DataField>
+        </Field>
+        <Field Name="Item__Standard_Cost_">
+          <DataField>Item__Standard_Cost_</DataField>
+        </Field>
+        <Field Name="Item__Standard_Cost_Format">
+          <DataField>Item__Standard_Cost_Format</DataField>
+        </Field>
+        <Field Name="Item__Last_Direct_Cost_">
+          <DataField>Item__Last_Direct_Cost_</DataField>
+        </Field>
+        <Field Name="Item__Last_Direct_Cost_Format">
+          <DataField>Item__Last_Direct_Cost_Format</DataField>
+        </Field>
+        <Field Name="Item__Unit_Price_">
+          <DataField>Item__Unit_Price_</DataField>
+        </Field>
+        <Field Name="Item__Unit_Price_Format">
+          <DataField>Item__Unit_Price_Format</DataField>
+        </Field>
+        <Field Name="Item__Base_Unit_of_Measure_">
+          <DataField>Item__Base_Unit_of_Measure_</DataField>
+        </Field>
+        <Field Name="Item__Unit_Price__Control1480000">
+          <DataField>Item__Unit_Price__Control1480000</DataField>
+        </Field>
+        <Field Name="Item__Unit_Price__Control1480000Format">
+          <DataField>Item__Unit_Price__Control1480000Format</DataField>
+        </Field>
+        <Field Name="AvgCost_Control1480001">
+          <DataField>AvgCost_Control1480001</DataField>
+        </Field>
+        <Field Name="AvgCost_Control1480001Format">
+          <DataField>AvgCost_Control1480001Format</DataField>
+        </Field>
+        <Field Name="Item__Last_Direct_Cost__Control1480002">
+          <DataField>Item__Last_Direct_Cost__Control1480002</DataField>
+        </Field>
+        <Field Name="Item__Last_Direct_Cost__Control1480002Format">
+          <DataField>Item__Last_Direct_Cost__Control1480002Format</DataField>
+        </Field>
+        <Field Name="Item__Standard_Cost__Control1480003">
+          <DataField>Item__Standard_Cost__Control1480003</DataField>
+        </Field>
+        <Field Name="Item__Standard_Cost__Control1480003Format">
+          <DataField>Item__Standard_Cost__Control1480003Format</DataField>
+        </Field>
+        <Field Name="Item__Base_Unit_of_Measure__Control1480005">
+          <DataField>Item__Base_Unit_of_Measure__Control1480005</DataField>
+        </Field>
+        <Field Name="Item_Description_Control1480006">
+          <DataField>Item_Description_Control1480006</DataField>
+        </Field>
+        <Field Name="Item__No___Control1480007">
+          <DataField>Item__No___Control1480007</DataField>
+        </Field>
+        <Field Name="Item_Inventory_Posting_Group">
+          <DataField>Item_Inventory_Posting_Group</DataField>
+        </Field>
+        <Field Name="Item_Location_Filter">
+          <DataField>Item_Location_Filter</DataField>
+        </Field>
+        <Field Name="Item_Variant_Filter">
+          <DataField>Item_Variant_Filter</DataField>
+        </Field>
+        <Field Name="Item_Cost_and_Price_ListCaption">
+          <DataField>Item_Cost_and_Price_ListCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Item__No__Caption">
+          <DataField>Item__No__Caption</DataField>
+        </Field>
+        <Field Name="Item_DescriptionCaption">
+          <DataField>Item_DescriptionCaption</DataField>
+        </Field>
+        <Field Name="Item__Base_Unit_of_Measure_Caption">
+          <DataField>Item__Base_Unit_of_Measure_Caption</DataField>
+        </Field>
+        <Field Name="AvgCostCaption">
+          <DataField>AvgCostCaption</DataField>
+        </Field>
+        <Field Name="Item__Standard_Cost_Caption">
+          <DataField>Item__Standard_Cost_Caption</DataField>
+        </Field>
+        <Field Name="Item__Last_Direct_Cost_Caption">
+          <DataField>Item__Last_Direct_Cost_Caption</DataField>
+        </Field>
+        <Field Name="Item__Unit_Price_Caption">
+          <DataField>Item__Unit_Price_Caption</DataField>
+        </Field>
+        <Field Name="Item__Unit_Price__Control1480000Caption">
+          <DataField>Item__Unit_Price__Control1480000Caption</DataField>
+        </Field>
+        <Field Name="AvgCost_Control1480001Caption">
+          <DataField>AvgCost_Control1480001Caption</DataField>
+        </Field>
+        <Field Name="Item__Last_Direct_Cost__Control1480002Caption">
+          <DataField>Item__Last_Direct_Cost__Control1480002Caption</DataField>
+        </Field>
+        <Field Name="Item__Standard_Cost__Control1480003Caption">
+          <DataField>Item__Standard_Cost__Control1480003Caption</DataField>
+        </Field>
+        <Field Name="Item__Base_Unit_of_Measure__Control1480005Caption">
+          <DataField>Item__Base_Unit_of_Measure__Control1480005Caption</DataField>
+        </Field>
+        <Field Name="Item_Description_Control1480006Caption">
+          <DataField>Item_Description_Control1480006Caption</DataField>
+        </Field>
+        <Field Name="Item__No___Control1480007Caption">
+          <DataField>Item__No___Control1480007Caption</DataField>
+        </Field>
+        <Field Name="Stockkeeping_Unit__Location_Code_Caption">
+          <DataField>Stockkeeping_Unit__Location_Code_Caption</DataField>
+        </Field>
+        <Field Name="Stockkeeping_Unit__Variant_Code_Caption">
+          <DataField>Stockkeeping_Unit__Variant_Code_Caption</DataField>
+        </Field>
+        <Field Name="Item_VendorItemNo">
+          <DataField>Item_VendorItemNo</DataField>
+        </Field>
+        <Field Name="Item_ManufacturerItemNo">
+          <DataField>Item_ManufacturerItemNo</DataField>
+        </Field>
+        <Field Name="Item_VendorItemNoCaption">
+          <DataField>Item_VendorItemNoCaption</DataField>
+        </Field>
+        <Field Name="Item_ManufacturerItemNoCaption">
+          <DataField>Item_ManufacturerItemNoCaption</DataField>
+        </Field>
+        <Field Name="Stockkeeping_Unit__Item_No__">
+          <DataField>Stockkeeping_Unit__Item_No__</DataField>
+        </Field>
+        <Field Name="Stockkeeping_Unit__Location_Code_">
+          <DataField>Stockkeeping_Unit__Location_Code_</DataField>
+        </Field>
+        <Field Name="Stockkeeping_Unit__Variant_Code_">
+          <DataField>Stockkeeping_Unit__Variant_Code_</DataField>
+        </Field>
+        <Field Name="Stockkeeping_Unit_Description">
+          <DataField>Stockkeeping_Unit_Description</DataField>
+        </Field>
+        <Field Name="Stockkeeping_Unit__Standard_Cost_">
+          <DataField>Stockkeeping_Unit__Standard_Cost_</DataField>
+        </Field>
+        <Field Name="Stockkeeping_Unit__Standard_Cost_Format">
+          <DataField>Stockkeeping_Unit__Standard_Cost_Format</DataField>
+        </Field>
+        <Field Name="Stockkeeping_Unit__Last_Direct_Cost_">
+          <DataField>Stockkeeping_Unit__Last_Direct_Cost_</DataField>
+        </Field>
+        <Field Name="Stockkeeping_Unit__Last_Direct_Cost_Format">
+          <DataField>Stockkeeping_Unit__Last_Direct_Cost_Format</DataField>
+        </Field>
+        <Field Name="Item__Base_Unit_of_Measure__Control1480030">
+          <DataField>Item__Base_Unit_of_Measure__Control1480030</DataField>
+        </Field>
+        <Field Name="AvgCost_Control1480031">
+          <DataField>AvgCost_Control1480031</DataField>
+        </Field>
+        <Field Name="AvgCost_Control1480031Format">
+          <DataField>AvgCost_Control1480031Format</DataField>
+        </Field>
+        <Field Name="Item__Unit_Price__Control1480032">
+          <DataField>Item__Unit_Price__Control1480032</DataField>
+        </Field>
+        <Field Name="Item__Unit_Price__Control1480032Format">
+          <DataField>Item__Unit_Price__Control1480032Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
